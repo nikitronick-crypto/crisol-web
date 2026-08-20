@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuenta confirmada · Crisol</title>
+<link rel="icon" href="logo.png">
+<style>
+  /* Los mismos colores de la app: quien llega aquí desde el correo debe
+     reconocer que sigue en el mismo sitio. */
+  :root {
+    --fondo: #0F172A;
+    --fondo-medio: #1E293B;
+    --acento: #C6FF00;
+    --texto: #FFFFFF;
+    --texto-suave: rgba(255,255,255,.70);
+    --texto-tenue: rgba(255,255,255,.54);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: radial-gradient(circle at 30% 0%, #1E293B 0%, #0F172A 60%);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    text-align: center;
+  }
+
+  .tarjeta {
+    max-width: 420px;
+    width: 100%;
+    padding: 40px 28px 32px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(198,255,0,.22);
+    border-radius: 28px;
+    backdrop-filter: blur(18px);
+  }
+
+  .logo {
+    display: block;
+    width: 88px;
+    height: 88px;
+    /* El recorte redondo va en el propio archivo, no aquí: con border-radius
+       sobre una imagen opaca asomaban las esquinas del ícono. */
+    margin: 0 auto 22px;
+  }
+
+  .marca {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(198,255,0,.14);
+    border: 2px solid var(--acento);
+  }
+
+  /* El tilde se dibuja: una imagen más que cargar solo para esto sería
+     desproporcionado. */
+  .marca svg { width: 30px; height: 30px; stroke: var(--acento); }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: var(--texto-suave);
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .aviso {
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    color: var(--texto-tenue);
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .paso {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .num {
+    flex: 0 0 20px;
+    height: 20px;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(198,255,0,.16);
+    color: var(--acento);
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .paso span { color: var(--texto-suave); font-size: 13.5px; line-height: 1.5; }
+
+  .pie { margin-top: 24px; color: rgba(255,255,255,.34); font-size: 11.5px; }
+</style>
+</head>
+<body>
+  <main class="tarjeta">
+    <img class="logo" src="logo.png" alt="Crisol">
+
+    <div class="marca" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="3"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6 9 17l-5-5"/>
+      </svg>
+    </div>
+
+    <h1>Cuenta confirmada</h1>
+    <p>Tu correo quedó verificado. Ya puedes entrar a Crisol.</p>
+
+    <div style="margin-top:24px">
+      <div class="paso">
+        <div class="num">1</div>
+        <span>Cierra esta pestaña.</span>
+      </div>
+      <div class="paso">
+        <div class="num">2</div>
+        <span>Vuelve a la aplicación.</span>
+      </div>
+      <div class="paso">
+        <div class="num">3</div>
+        <span>Inicia sesión con tu correo y contraseña.</span>
+      </div>
+    </div>
+
+    <p class="aviso">
+      Si cerraste la app, ábrela de nuevo. No hace falta volver a registrarse.
+    </p>
+
+    <p class="pie">Crisol</p>
+  </main>
+</body>
+</html>
