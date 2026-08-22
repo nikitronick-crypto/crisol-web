@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · Crisol</title>
+<link rel="icon" href="logo.png">
+<style>
+  :root {
+    --fondo: #0F172A;
+    --fondo-medio: #1E293B;
+    --acento: #C6FF00;
+    --alerta: #FFB300;
+    --texto: #FFFFFF;
+    --texto-suave: rgba(255,255,255,.74);
+    --texto-tenue: rgba(255,255,255,.56);
+    --texto-debil: rgba(255,255,255,.38);
+    --borde: rgba(255,255,255,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(circle at 50% 0%, #1E293B 0%, #0F172A 55%);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    padding: 0 20px 80px;
+  }
+  .contenedor { max-width: 760px; margin: 0 auto; }
+
+  header { padding: 56px 0 34px; text-align: center; border-bottom: 1px solid var(--borde); }
+  header img { width: 76px; height: 76px; margin-bottom: 18px; }
+  h1 { font-size: 30px; letter-spacing: .5px; margin-bottom: 10px; }
+  .fechas { color: var(--texto-debil); font-size: 13px; }
+
+  h2 {
+    font-size: 20px; margin: 42px 0 14px; color: var(--acento);
+    letter-spacing: .3px;
+  }
+  h3 { font-size: 16px; margin: 24px 0 8px; color: var(--texto); }
+  p, li { color: var(--texto-suave); font-size: 15px; }
+  p { margin-bottom: 14px; }
+  ul, ol { margin: 0 0 16px 22px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--texto); }
+  a { color: var(--acento); }
+
+  .destacado {
+    background: rgba(198,255,0,.07);
+    border: 1px solid rgba(198,255,0,.28);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin: 22px 0;
+  }
+  .destacado p:last-child { margin-bottom: 0; }
+  .aviso {
+    background: rgba(255,179,0,.07);
+    border: 1px solid rgba(255,179,0,.30);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin: 22px 0;
+  }
+  .aviso p:last-child { margin-bottom: 0; }
+
+  table { width: 100%; min-width: 520px; border-collapse: collapse; margin: 16px 0 22px; font-size: 14px; }
+  th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--borde); vertical-align: top; }
+  th { color: var(--texto-tenue); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+  td { color: var(--texto-suave); }
+  .tabla-envoltura {
+    overflow-x: auto;
+    /* Las tablas de tres columnas no caben en un teléfono: se desplazan en
+       lugar de comprimirse hasta volverse ilegibles. */
+    -webkit-overflow-scrolling: touch;
+  }
+  .pista-tabla { color: var(--texto-debil); font-size: 12px; margin: -10px 0 18px; }
+  @media (min-width: 640px) { .pista-tabla { display: none; } }
+
+  footer {
+    margin-top: 56px; padding-top: 26px;
+    border-top: 1px solid var(--borde);
+    text-align: center; color: var(--texto-debil); font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="contenedor">
+
+<header>
+  <img src="logo.png" alt="Crisol">
+  <h1>Política de privacidad</h1>
+  <p class="fechas">Crisol · Última actualización: 22 de agosto de 2026 · Versión 1.0</p>
+</header>
+
+<h2>Lo esencial, en cuatro líneas</h2>
+<div class="destacado">
+  <p><strong>Crisol no vende tus datos, no muestra publicidad y no comparte tu información con anunciantes.</strong> No hay ningún negocio detrás de tus datos: la app es gratuita y se mantiene con aportes voluntarios.</p>
+  <p>Tus datos de salud —medicamentos, recetas, órdenes médicas— <strong>no se publican en ninguna parte de la app</strong>, ni siquiera en tu perfil público. La foto de una receta escaneada <strong>no sale de tu teléfono</strong>. Y ningún resultado de examen pasa por Crisol.</p>
+</div>
+
+<h2>1. Quién responde por tus datos</h2>
+<p>Crisol es una aplicación desarrollada y operada por <strong>[TU NOMBRE COMPLETO]</strong>, persona natural, en Chile.</p>
+<p>Para cualquier consulta, solicitud o reclamo sobre tus datos personales, el canal de contacto es
+<a href="mailto:soportecrisolapp@gmail.com">soportecrisolapp@gmail.com</a>. Respondemos en un plazo máximo de 30 días corridos.</p>
+
+<h2>2. Qué datos recogemos y para qué</h2>
+<p>Solo lo que la app necesita para funcionar. Nada se recoge "por si acaso".</p>
+
+<div class="tabla-envoltura">
+<table>
+  <tr><th>Dato</th><th>Para qué</th><th>Base</th></tr>
+  <tr>
+    <td><strong>Correo electrónico</strong> y contraseña</td>
+    <td>Crear tu cuenta, iniciar sesión y recuperar el acceso. La contraseña nunca se guarda en texto plano.</td>
+    <td>Ejecución del servicio</td>
+  </tr>
+  <tr>
+    <td><strong>Nombre, nombre de usuario, foto y ciudad</strong></td>
+    <td>Identificarte dentro de la app y, si activas tu perfil público, mostrarte en el ranking y la comunidad.</td>
+    <td>Consentimiento</td>
+  </tr>
+  <tr>
+    <td><strong>Fecha de nacimiento, sexo, estatura y peso corporal</strong></td>
+    <td>Calcular tus objetivos de nutrición con límites seguros y tu coeficiente DOTS para el ranking de fuerza.</td>
+    <td>Consentimiento</td>
+  </tr>
+  <tr>
+    <td><strong>Entrenamientos</strong>: ejercicios, series, kilos, repeticiones</td>
+    <td>Tu registro de entrenamiento, estadísticas y progreso.</td>
+    <td>Ejecución del servicio</td>
+  </tr>
+  <tr>
+    <td><strong>Nutrición</strong>: comidas, calorías, macronutrientes, agua</td>
+    <td>Tu diario de alimentación y el seguimiento de tus metas.</td>
+    <td>Consentimiento</td>
+  </tr>
+  <tr>
+    <td><strong>Medicamentos</strong>: nombre, dosis, horarios, notas y tomas registradas</td>
+    <td>Recordarte tus tomas con alarmas y llevar tu registro de adherencia.</td>
+    <td>Consentimiento explícito (dato sensible)</td>
+  </tr>
+  <tr>
+    <td><strong>Recetas y órdenes médicas</strong> emitidas por profesionales verificados</td>
+    <td>Que tu médico o enfermero pueda cargarte una indicación y que tú la veas y la sigas.</td>
+    <td>Consentimiento explícito (dato sensible)</td>
+  </tr>
+  <tr>
+    <td><strong>Pasos y calorías activas</strong> (Health Connect)</td>
+    <td>Complementar tu gasto energético estimado. Solo si concedes el permiso.</td>
+    <td>Consentimiento explícito (dato sensible)</td>
+  </tr>
+  <tr>
+    <td><strong>Fotos y videos</strong> que subes: avatar, gimnasios, platos de comida, videos de récord</td>
+    <td>Mostrar tu perfil, el directorio de gimnasios, estimar tu comida y verificar tus marcas de fuerza.</td>
+    <td>Consentimiento</td>
+  </tr>
+  <tr>
+    <td><strong>Credenciales profesionales</strong> (título, cédula) si te registras como profesional</td>
+    <td>Verificar que eres quien dices ser antes de dejarte asignar planes o recetar.</td>
+    <td>Consentimiento explícito</td>
+  </tr>
+</table>
+</div>
+<p class="pista-tabla">Desliza la tabla hacia el lado para verla completa.</p>
+
+<h2>3. Datos de salud: reglas especiales</h2>
+<p>Los medicamentos, las recetas, las órdenes médicas y tus datos corporales son <strong>datos sensibles</strong> según la ley chilena. Los tratamos con reglas más estrictas que el resto:</p>
+<ul>
+  <li><strong>Nunca son públicos.</strong> No aparecen en tu perfil, ni en el muro, ni en el ranking, ni en nada que se comparta. Tu perfil público jamás muestra peso corporal, medidas, comidas, objetivos ni medicamentos.</li>
+  <li><strong>Tu registro de tomas es solo tuyo.</strong> Ningún profesional lo ve, ni siquiera quien te recetó. El médico sabe qué indicó; qué hiciste tú con esa indicación es asunto tuyo.</li>
+  <li><strong>La foto de una receta escaneada no sale de tu teléfono.</strong> Se envía cifrada solo durante los segundos que dura el análisis y no queda guardada en ningún servidor. La copia que ves en la app vive únicamente en tu dispositivo y se borra cuando eliminas el medicamento.</li>
+  <li><strong>Ningún resultado de examen pasa por Crisol.</strong> Ni el informe, ni el valor, ni una foto del papel. La app solo guarda la orden que un profesional emitió. Es la única forma de no tener que proteger el dato más sensible que existe en salud: no tenerlo.</li>
+  <li><strong>Solo profesionales verificados</strong> —médicos y enfermeros con credencial revisada— pueden cargarte una receta o una orden, y únicamente si tú aceptaste el vínculo con ellos. Tú decides ese vínculo y puedes terminarlo cuando quieras.</li>
+</ul>
+
+<h2>4. Con quién compartimos datos</h2>
+<p>Con nadie con fines comerciales. Solo con los proveedores técnicos que hacen funcionar la app, y cada uno recibe únicamente lo que necesita:</p>
+
+<div class="tabla-envoltura">
+<table>
+  <tr><th>Proveedor</th><th>Qué recibe</th><th>Dónde</th></tr>
+  <tr>
+    <td><strong>Supabase</strong> (base de datos, cuentas y archivos)</td>
+    <td>Tu cuenta y los datos que sincronizas.</td>
+    <td>Estados Unidos</td>
+  </tr>
+  <tr>
+    <td><strong>Google — Gemini</strong> (inteligencia artificial)</td>
+    <td>Solo la imagen o el texto del momento: la foto de un plato, la foto de una receta o tus objetivos ya calculados. <strong>No recibe tu identidad</strong> ni tu historial.</td>
+    <td>Estados Unidos</td>
+  </tr>
+  <tr>
+    <td><strong>Cloudflare R2</strong></td>
+    <td>Los videos de récord que subes al ranking, que son públicos por su naturaleza y se borran al resolverse la verificación.</td>
+    <td>Global</td>
+  </tr>
+  <tr>
+    <td><strong>Mercado Pago</strong></td>
+    <td>Si donas: el monto y tu identificador de Crisol. <strong>La app nunca ve ni guarda los datos de tu tarjeta</strong>; el pago ocurre íntegramente en el sitio de Mercado Pago.</td>
+    <td>Chile / Argentina</td>
+  </tr>
+  <tr>
+    <td><strong>Google Play Services</strong> y <strong>Health Connect</strong></td>
+    <td>Health Connect entrega los pasos al teléfono; ese dato no sale del dispositivo salvo que lo sincronices con tu cuenta.</td>
+    <td>En el dispositivo</td>
+  </tr>
+</table>
+</div>
+<p class="pista-tabla">Desliza la tabla hacia el lado para verla completa.</p>
+<p>También compartimos datos cuando una autoridad competente lo exige por ley, y en ese caso te lo informamos salvo que la propia orden lo prohíba.</p>
+
+<h2>5. Transferencia internacional</h2>
+<p>Nuestros proveedores de infraestructura están fuera de Chile, principalmente en Estados Unidos. Al usar Crisol aceptas esa transferencia, que se realiza sobre conexiones cifradas y con proveedores que ofrecen cláusulas contractuales de protección de datos.</p>
+
+<h2>6. Cuánto tiempo guardamos tus datos</h2>
+<ul>
+  <li><strong>Mientras tengas cuenta activa</strong>, conservamos tus datos para que la app funcione.</li>
+  <li><strong>Si borras tu cuenta</strong>, eliminamos tus datos personales de nuestros servidores en un plazo máximo de 30 días.</li>
+  <li><strong>Si cierras sesión</strong>, todo lo que había en tu teléfono —entrenamientos, comidas, medicamentos, recetas y sus fotos— se borra del dispositivo de inmediato. Son datos de salud y no pueden quedar en un teléfono que cambió de manos.</li>
+  <li><strong>Los documentos de identidad</strong> que suben los profesionales se eliminan apenas se resuelve la verificación.</li>
+  <li><strong>Los videos de récord</strong> se borran cuando la comunidad termina de verificarlos.</li>
+</ul>
+<p>Crisol tiene desactivada la copia de seguridad automática de Android: tu base de datos con medicamentos y recetas <strong>no se sube a Google Drive</strong> ni se transfiere al cambiar de teléfono.</p>
+
+<h2>7. Tus derechos</h2>
+<p>La Ley 19.628 y la Ley 21.719 —que entra en plena vigencia el 1 de diciembre de 2026— te reconocen estos derechos, que puedes ejercer escribiendo a <a href="mailto:soportecrisolapp@gmail.com">soportecrisolapp@gmail.com</a>:</p>
+<ul>
+  <li><strong>Acceso:</strong> saber qué datos tuyos tenemos y obtener una copia.</li>
+  <li><strong>Rectificación:</strong> corregir lo que esté equivocado o incompleto. La mayoría lo puedes editar tú mismo desde la app.</li>
+  <li><strong>Cancelación o supresión:</strong> borrar tu cuenta y tus datos. También puedes hacerlo tú desde la app.</li>
+  <li><strong>Oposición:</strong> negarte a que tratemos ciertos datos, aunque eso puede impedir que algunas funciones sigan operando.</li>
+  <li><strong>Portabilidad:</strong> pedir tus datos en un formato estructurado y legible por máquina para llevártelos a otro servicio.</li>
+  <li><strong>Retirar tu consentimiento</strong> en cualquier momento, sin que eso afecte lo que hicimos antes de que lo retiraras.</li>
+</ul>
+<p>Si crees que no respondimos bien, puedes reclamar ante la <strong>Agencia de Protección de Datos Personales</strong> de Chile una vez que entre en funciones.</p>
+
+<h2>8. Seguridad</h2>
+<ul>
+  <li>Todo viaja cifrado con <strong>HTTPS/TLS</strong>. Nada se transmite en claro.</li>
+  <li>La base de datos usa <strong>seguridad a nivel de fila</strong>: cada usuario solo puede leer y escribir lo suyo, y esa regla la aplica el servidor, no la app.</li>
+  <li>Las columnas que calcula el servidor —tu puntaje, tus medallas, el estado de revisión de tus fotos— <strong>no se pueden alterar desde un cliente modificado</strong>.</li>
+  <li>Las contraseñas se guardan con funciones de hash irreversibles. Nadie, tampoco nosotros, puede leerlas.</li>
+  <li>Todo contenido que subes —fotos, videos— pasa por revisión automática <strong>antes</strong> de que otra persona pueda verlo.</li>
+</ul>
+<p>Si ocurriera una vulneración que afecte tus datos, te lo informaremos por correo y a la autoridad, dentro de los plazos que exige la ley.</p>
+
+<h2>9. Menores de edad</h2>
+<p>Crisol está dirigida a <strong>mayores de 16 años</strong>. Si tienes entre 16 y 18, necesitas la autorización de tu madre, padre o tutor para usarla.</p>
+<p>La app aplica protecciones adicionales a las personas menores de 18: <strong>no sugiere déficits calóricos ni cambios de dieta</strong> a quien declara ser menor de edad. Si detectamos una cuenta de alguien menor de 16, la eliminaremos junto con sus datos.</p>
+
+<h2>10. Inteligencia artificial</h2>
+<div class="aviso">
+  <p>Crisol usa inteligencia artificial para <strong>estimar</strong> las calorías de una foto, <strong>transcribir</strong> una receta médica y <strong>proponer</strong> rutinas y repartos de comidas.</p>
+  <p><strong>La IA puede cometer errores y no reemplaza la indicación de un profesional de la salud.</strong> Nunca decide sobre tus medicamentos: no sugiere fármacos, no corrige dosis y no evalúa interacciones. Cuando escanea una receta solo copia lo que ya estaba escrito, y nada se guarda sin que tú lo confirmes campo por campo.</p>
+  <p>Los objetivos de calorías los calcula la app con límites de seguridad —nunca bajo tu metabolismo basal—, no la IA.</p>
+</div>
+
+<h2>11. Lo que Crisol no hace</h2>
+<ul>
+  <li>No vende ni cede tus datos a terceros con fines comerciales.</li>
+  <li>No muestra publicidad ni usa rastreadores publicitarios.</li>
+  <li>No elabora perfiles tuyos para venderlos ni toma decisiones automatizadas con efectos jurídicos sobre ti.</li>
+  <li>No diagnostica, no receta y no comprueba dosis ni interacciones.</li>
+  <li>No accede a tu ubicación, tus contactos ni tus mensajes.</li>
+  <li>No guarda los datos de tu tarjeta ni de ningún medio de pago.</li>
+</ul>
+
+<h2>12. Cambios en esta política</h2>
+<p>Si cambiamos algo relevante, actualizaremos la fecha de arriba y te avisaremos dentro de la app antes de que el cambio entre en vigor. Las versiones anteriores quedan disponibles si las solicitas.</p>
+
+<h2>13. Contacto</h2>
+<p>Escríbenos a <a href="mailto:soportecrisolapp@gmail.com">soportecrisolapp@gmail.com</a> por cualquier duda, solicitud de datos, ejercicio de derechos o reclamo.</p>
+
+<footer>
+  Crisol · Hecha en Chile<br>
+  Esta aplicación no reemplaza la indicación de un profesional de la salud.
+</footer>
+
+</div>
+</body>
+</html>
