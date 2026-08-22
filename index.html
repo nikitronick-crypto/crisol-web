@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crisol · Entrenamiento, nutrición y salud</title>
+<meta name="description" content="Crisol: entrenamiento, nutrición y alarmas de medicamentos en una sola app. Funciona sin señal. Hecha en Chile, sin publicidad y sin vender tus datos.">
+<link rel="icon" href="logo.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Crisol · Entrenamiento, nutrición y salud">
+<meta property="og:description" content="Entrena, come mejor y no olvides tu remedio. Todo funciona sin señal.">
+<meta property="og:image" content="logo.png">
+<meta name="theme-color" content="#0F172A">
+
+<style>
+  :root {
+    --fondo: #0F172A;
+    --fondo-medio: #1E293B;
+    --acento: #C6FF00;
+    --alerta: #FFB300;
+    --texto: #FFFFFF;
+    --texto-suave: rgba(255,255,255,.74);
+    --texto-tenue: rgba(255,255,255,.56);
+    --texto-debil: rgba(255,255,255,.38);
+    --borde: rgba(255,255,255,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(circle at 50% 0%, #1E293B 0%, #0F172A 55%);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    padding: 0 20px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .contenedor { max-width: 940px; margin: 0 auto; }
+
+  /* ---------- Portada ---------- */
+  header { padding: 72px 0 44px; text-align: center; }
+  header img.logo { width: 96px; height: 96px; margin-bottom: 22px; }
+  h1 {
+    font-size: clamp(34px, 6vw, 52px);
+    letter-spacing: -.5px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  h1 .acento { color: var(--acento); }
+  .bajada {
+    color: var(--texto-suave);
+    font-size: clamp(16px, 2.4vw, 19px);
+    max-width: 34ch;
+    margin: 0 auto 32px;
+  }
+  .acciones { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .boton {
+    display: inline-block;
+    background: var(--acento); color: #000;
+    font-weight: 700; font-size: 16px;
+    padding: 14px 30px; border-radius: 999px;
+    text-decoration: none;
+    transition: transform .15s ease;
+  }
+  .boton:hover { transform: translateY(-2px); }
+  .boton.secundario {
+    background: transparent; color: var(--texto);
+    border: 1px solid rgba(255,255,255,.22);
+  }
+  .boton:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  .nota-tienda {
+    color: var(--texto-debil); font-size: 13.5px;
+    margin-top: 18px;
+  }
+
+  /* ---------- Video ---------- */
+  .video-envoltura {
+    margin: 52px auto 0;
+    max-width: 380px;
+    border-radius: 26px;
+    overflow: hidden;
+    border: 1px solid var(--borde);
+    background: #000;
+    box-shadow: 0 24px 60px rgba(0,0,0,.45);
+  }
+  .video-envoltura video { display: block; width: 100%; height: auto; }
+
+  /* ---------- Secciones ---------- */
+  h2 {
+    font-size: 13px; letter-spacing: 1.6px; text-transform: uppercase;
+    color: var(--acento); margin-bottom: 26px; text-align: center;
+  }
+  section { padding: 68px 0 0; }
+
+  .rejilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .tarjeta {
+    background: rgba(255,255,255,.05);
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    padding: 26px 24px;
+  }
+  .tarjeta h3 { font-size: 17px; margin-bottom: 8px; }
+  .tarjeta p { color: var(--texto-tenue); font-size: 14.5px; }
+  .tarjeta .icono { font-size: 26px; display: block; margin-bottom: 14px; }
+
+  .destacado {
+    margin-top: 16px;
+    background: rgba(198,255,0,.06);
+    border: 1px solid rgba(198,255,0,.24);
+    border-radius: 20px;
+    padding: 30px 26px;
+    text-align: center;
+  }
+  .destacado h3 { font-size: 19px; margin-bottom: 10px; }
+  .destacado p { color: var(--texto-suave); font-size: 15px; max-width: 56ch; margin: 0 auto; }
+
+  /* ---------- Enlaces legales ---------- */
+  .enlaces {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 12px;
+  }
+  a.enlace {
+    display: block;
+    background: rgba(255,255,255,.05);
+    border: 1px solid var(--borde);
+    border-radius: 16px;
+    padding: 20px 22px;
+    text-decoration: none;
+    color: var(--texto);
+    transition: border-color .15s ease, background .15s ease;
+  }
+  a.enlace:hover { border-color: rgba(198,255,0,.4); background: rgba(198,255,0,.05); }
+  a.enlace strong { display: block; font-size: 15.5px; margin-bottom: 4px; }
+  a.enlace span { color: var(--texto-debil); font-size: 13.5px; }
+
+  /* ---------- Pie ---------- */
+  footer {
+    margin-top: 72px; padding-top: 30px;
+    border-top: 1px solid var(--borde);
+    text-align: center;
+  }
+  footer p { color: var(--texto-debil); font-size: 13.5px; margin-bottom: 6px; }
+  footer a { color: var(--texto-tenue); }
+  .aviso-medico {
+    color: var(--texto-debil); font-size: 13px;
+    max-width: 52ch; margin: 18px auto 0;
+  }
+
+  @media (max-width: 560px) {
+    header { padding: 48px 0 32px; }
+    section { padding: 52px 0 0; }
+  }
+</style>
+</head>
+<body>
+<div class="contenedor">
+
+  <header>
+    <img class="logo" src="logo.png" alt="Logo de Crisol">
+    <h1>Entrena. Come.<br><span class="acento">No olvides tu remedio.</span></h1>
+    <p class="bajada">Entrenamiento, nutrición y salud en una sola app. Y todo funciona aunque no haya señal.</p>
+
+    <div class="acciones">
+      <a class="boton" href="#que-hace">Qué hace</a>
+      <a class="boton secundario" href="mailto:soportecrisolapp@gmail.com">Escríbenos</a>
+    </div>
+
+    <!--
+      Cuando la app esté publicada, reemplaza el bloque .nota-tienda por:
+      <div class="acciones" style="margin-top:14px">
+        <a class="boton" href="https://play.google.com/store/apps/details?id=cl.nikitronick.crisol">Descargar en Google Play</a>
+      </div>
+    -->
+    <p class="nota-tienda">Próximamente en Google Play · Android</p>
+
+    <div class="video-envoltura">
+      <video src="crisol_promo.mp4" controls playsinline preload="metadata" poster="logo.png"></video>
+    </div>
+  </header>
+
+  <section id="que-hace">
+    <h2>Qué hace Crisol</h2>
+    <div class="rejilla">
+
+      <div class="tarjeta">
+        <span class="icono">🏋️</span>
+        <h3>Entrena y mide</h3>
+        <p>Series, repeticiones y kilos con el teléfono en la mano. Cronómetro de descanso que suena con la pantalla apagada, historial por ejercicio y tu 1RM estimado.</p>
+      </div>
+
+      <div class="tarjeta">
+        <span class="icono">🍽️</span>
+        <h3>Come con datos</h3>
+        <p>Diario de comidas con calorías y macros. Escanea el código de barras del envase o saca una foto del plato y recibe una estimación.</p>
+      </div>
+
+      <div class="tarjeta">
+        <span class="icono">💊</span>
+        <h3>No se te pasa el remedio</h3>
+        <p>Alarmas a pantalla completa, como un despertador. Horario de 24 horas, sin confundir mediodía con medianoche. Tratamientos por días, por meses o de por vida.</p>
+      </div>
+
+      <div class="tarjeta">
+        <span class="icono">📈</span>
+        <h3>Tu cuerpo en el tiempo</h3>
+        <p>Peso, medidas y porcentaje de grasa con gráficos claros. Se conecta con Health Connect para traer tus pasos y calorías.</p>
+      </div>
+
+      <div class="tarjeta">
+        <span class="icono">👥</span>
+        <h3>Comunidad, si quieres</h3>
+        <p>Comparte tus sesiones o mantenlas privadas. Ranking de récords verificados, directorio de gimnasios, y bloqueo y denuncia para decidir quién llega a ti.</p>
+      </div>
+
+      <div class="tarjeta">
+        <span class="icono">🩺</span>
+        <h3>Profesionales verificados</h3>
+        <p>Médicos, enfermeros, nutricionistas y entrenadores con credencial revisada pueden asignar planes y dejar indicaciones que llegan como alarmas a la hora exacta.</p>
+      </div>
+
+    </div>
+
+    <div class="destacado">
+      <h3>Sin señal, sin problema</h3>
+      <p>Todo lo que registras se guarda primero en tu teléfono y se sincroniza solo cuando vuelve la conexión. El gimnasio casi nunca tiene internet. Crisol no lo necesita.</p>
+    </div>
+
+    <div class="destacado">
+      <h3>Sin anuncios y sin vender tus datos</h3>
+      <p>Crisol la hace una persona sola. No hay publicidad, no hay suscripción y tu información no se vende ni se comparte con anunciantes. Si te sirve y quieres empujarla, puedes invitar un café — es voluntario y no desbloquea nada.</p>
+    </div>
+  </section>
+
+  <section id="tu-cuenta">
+    <h2>Tu cuenta y tus datos</h2>
+    <div class="enlaces">
+
+      <a class="enlace" href="privacidad.html">
+        <strong>Política de privacidad</strong>
+        <span>Qué guardamos, con quién, por cuánto tiempo y cuáles son tus derechos.</span>
+      </a>
+
+      <a class="enlace" href="eliminar-cuenta.html">
+        <strong>Eliminar tu cuenta</strong>
+        <span>Cómo borrar tu cuenta y todos tus datos, desde la app o por correo.</span>
+      </a>
+
+      <a class="enlace" href="mailto:soportecrisolapp@gmail.com">
+        <strong>Soporte</strong>
+        <span>soportecrisolapp@gmail.com — respondemos en un máximo de 30 días.</span>
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Crisol · Hecha en Chile por Nicolás Enrique Vidal Gómez</p>
+    <p><a href="privacidad.html">Privacidad</a> · <a href="eliminar-cuenta.html">Eliminar cuenta</a> · <a href="mailto:soportecrisolapp@gmail.com">Contacto</a></p>
+    <p class="aviso-medico">Crisol no reemplaza la indicación de un profesional de la salud. Las alarmas son un recordatorio, no un tratamiento. Ante cualquier duda sobre tu medicación, consulta a tu médico.</p>
+  </footer>
+
+</div>
+</body>
+</html>
