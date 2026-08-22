@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eliminar tu cuenta · Crisol</title>
+<link rel="icon" href="logo.png">
+<style>
+  :root {
+    --fondo: #0F172A;
+    --fondo-medio: #1E293B;
+    --acento: #C6FF00;
+    --alerta: #FFB300;
+    --peligro: #FF5252;
+    --texto: #FFFFFF;
+    --texto-suave: rgba(255,255,255,.74);
+    --texto-tenue: rgba(255,255,255,.56);
+    --texto-debil: rgba(255,255,255,.38);
+    --borde: rgba(255,255,255,.10);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(circle at 50% 0%, #1E293B 0%, #0F172A 55%);
+    color: var(--texto);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    padding: 0 20px 80px;
+  }
+  .contenedor { max-width: 680px; margin: 0 auto; }
+
+  header { padding: 56px 0 32px; text-align: center; border-bottom: 1px solid var(--borde); }
+  header img { width: 76px; height: 76px; margin-bottom: 18px; }
+  h1 { font-size: 30px; letter-spacing: .5px; margin-bottom: 10px; }
+  .bajada { color: var(--texto-tenue); font-size: 15px; max-width: 46ch; margin: 0 auto; }
+
+  h2 { font-size: 20px; margin: 40px 0 14px; color: var(--acento); letter-spacing: .3px; }
+  p, li { color: var(--texto-suave); font-size: 15px; }
+  p { margin-bottom: 14px; }
+  ul, ol { margin: 0 0 16px 22px; }
+  li { margin-bottom: 10px; }
+  strong { color: var(--texto); }
+  a { color: var(--acento); }
+
+  .pasos { list-style: none; margin: 0 0 8px; padding: 0; counter-reset: p; }
+  .pasos li {
+    counter-increment: p; position: relative;
+    padding-left: 44px; margin-bottom: 18px;
+  }
+  .pasos li::before {
+    content: counter(p);
+    position: absolute; left: 0; top: -1px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: rgba(198,255,0,.12); color: var(--acento);
+    border: 1px solid rgba(198,255,0,.4);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px;
+  }
+
+  .tarjeta {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(198,255,0,.24);
+    border-radius: 20px;
+    padding: 26px 24px;
+    margin: 26px 0;
+  }
+  .tarjeta.aviso { border-color: rgba(255,179,0,.34); background: rgba(255,179,0,.06); }
+  .tarjeta p:last-child { margin-bottom: 0; }
+  .tarjeta h3 {
+    font-size: 15px; letter-spacing: 1.2px; text-transform: uppercase;
+    margin-bottom: 12px; color: var(--texto);
+  }
+
+  .correo {
+    display: inline-block;
+    background: var(--acento); color: #000;
+    font-weight: 700; font-size: 16px;
+    padding: 14px 28px; border-radius: 999px;
+    text-decoration: none; margin: 6px 0 4px;
+  }
+  .correo:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 4px; font-size: 14.5px; }
+  td { padding: 10px 0; border-bottom: 1px solid var(--borde); color: var(--texto-suave); vertical-align: top; }
+  td:first-child { color: var(--texto); font-weight: 600; padding-right: 16px; width: 42%; }
+  tr:last-child td { border-bottom: none; }
+
+  footer {
+    margin-top: 52px; padding-top: 24px; border-top: 1px solid var(--borde);
+    text-align: center; color: var(--texto-debil); font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="contenedor">
+
+<header>
+  <img src="logo.png" alt="Crisol">
+  <h1>Eliminar tu cuenta de Crisol</h1>
+  <p class="bajada">Puedes borrar tu cuenta y todos tus datos cuando quieras. Aquí están las dos formas de hacerlo.</p>
+</header>
+
+<h2>Desde la app, en un minuto</h2>
+<p>Es la vía más rápida y no necesitas escribirle a nadie:</p>
+<ol class="pasos">
+  <li>Abre Crisol y ve a la pestaña <strong>Entrenar</strong>.</li>
+  <li>Toca el menú de los tres puntos, arriba a la derecha, y elige <strong>Mi perfil</strong>.</li>
+  <li>Baja hasta el final, hasta la sección <strong>Cuenta</strong>, y toca <strong>Eliminar mi cuenta</strong>.</li>
+  <li>Escribe <strong>ELIMINAR</strong> para confirmar. La cuenta y sus datos se borran de inmediato, y la sesión se cierra sola.</li>
+</ol>
+
+<h2>Si ya desinstalaste la app</h2>
+<p>Escríbenos desde <strong>el mismo correo con el que te registraste</strong>. Es la única forma que tenemos de comprobar que la cuenta es tuya, así que una solicitud desde otra dirección no la podemos procesar.</p>
+
+<div class="tarjeta">
+  <h3>Escribe a</h3>
+  <p><a class="correo" href="mailto:soportecrisolapp@gmail.com?subject=Eliminar%20mi%20cuenta%20de%20Crisol&amp;body=Hola%2C%0A%0AQuiero%20eliminar%20mi%20cuenta%20de%20Crisol%20y%20todos%20mis%20datos.%0A%0ACorreo%20de%20la%20cuenta%3A%20(el%20mismo%20desde%20el%20que%20env%C3%ADo%20este%20mensaje)%0ANombre%20de%20usuario%3A%20%0A%0AGracias.">soportecrisolapp@gmail.com</a></p>
+  <p style="margin-top:12px">Pon <strong>«Eliminar mi cuenta»</strong> en el asunto. Te confirmamos por correo cuando esté hecho, en un plazo máximo de <strong>30 días corridos</strong>, aunque normalmente tarda mucho menos.</p>
+</div>
+
+<h2>Qué se borra</h2>
+<p>Todo lo que sea tuyo, sin que quede copia:</p>
+<table>
+  <tr>
+    <td>Tu cuenta</td>
+    <td>Correo, contraseña, nombre, foto de perfil y nombre de usuario.</td>
+  </tr>
+  <tr>
+    <td>Entrenamientos</td>
+    <td>Sesiones, series, kilos, rutinas propias y estadísticas.</td>
+  </tr>
+  <tr>
+    <td>Nutrición</td>
+    <td>Diario de comidas, metas y registro de agua.</td>
+  </tr>
+  <tr>
+    <td>Salud</td>
+    <td>Medicamentos, tomas registradas, recetas y órdenes médicas.</td>
+  </tr>
+  <tr>
+    <td>Cuerpo</td>
+    <td>Peso, estatura, medidas y objetivos.</td>
+  </tr>
+  <tr>
+    <td>Contenido publicado</td>
+    <td>Sesiones compartidas en el muro, reseñas de gimnasios y videos de récord.</td>
+  </tr>
+  <tr>
+    <td>Ranking</td>
+    <td>Tus marcas verificadas y tu posición desaparecen de la clasificación.</td>
+  </tr>
+</table>
+
+<div class="tarjeta aviso">
+  <h3>Ten en cuenta</h3>
+  <p><strong>Es irreversible.</strong> No hay forma de recuperar una cuenta borrada ni sus datos: no guardamos copias de seguridad de cuentas eliminadas.</p>
+  <p>Si vuelves a registrarte con el mismo correo, será una cuenta nueva y vacía.</p>
+</div>
+
+<h2>Lo que puede quedar, y por qué</h2>
+<ul>
+  <li><strong>Los votos que diste</strong> al revisar récords de otras personas se conservan sin tu nombre, de forma anónima. Quitarlos invalidaría verificaciones ajenas que no tienen nada que ver contigo.</li>
+  <li><strong>Las indicaciones que emitiste</strong>, si eres un profesional verificado, siguen en la cuenta del paciente que las recibió: son su historial de salud, no el tuyo.</li>
+  <li><strong>Registros exigidos por ley</strong>, si los hubiera, solo por el tiempo que la normativa obligue.</li>
+</ul>
+
+<h2>Borrar solo algunos datos</h2>
+<p>No hace falta eliminar la cuenta entera para deshacerte de algo puntual. Desde la app puedes borrar un entrenamiento, una comida, un medicamento o un récord, uno por uno. Y si prefieres solo dejar de aparecer ante los demás, en tu perfil de atleta puedes volverlo privado sin borrar nada.</p>
+
+<h2>Dudas</h2>
+<p>Escríbenos a <a href="mailto:soportecrisolapp@gmail.com">soportecrisolapp@gmail.com</a>. Puedes leer también la <a href="privacidad.html">política de privacidad</a>, donde está el detalle de qué datos guardamos y por cuánto tiempo.</p>
+
+<footer>
+  Crisol · Hecha en Chile<br>
+  Última actualización: 22 de agosto de 2026
+</footer>
+
+</div>
+</body>
+</html>
